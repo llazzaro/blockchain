@@ -21,7 +21,6 @@ func (c *Client) loadResponse(path string, i interface{}, formatJson bool) error
 		full_path = API_ROOT + path + "?format=json"
 	}
 
-	fmt.Println("querying..." + full_path)
 	rsp, e := c.Get(full_path)
 	if e != nil {
 		return e
